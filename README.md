@@ -1,5 +1,6 @@
-[![Gem Version](https://badge.fury.io/rb/omniauth-google-oauth2.svg)](https://badge.fury.io/rb/omniauth-google-oauth2)
-[![Build Status](https://travis-ci.org/zquestz/omniauth-google-oauth2.png)](https://travis-ci.org/zquestz/omniauth-google-oauth2)
+[![Gem Version](https://badge.fury.io/rb/omniauth-adp-oauth2.svg)](https://badge.fury.io/rb/omniauth-adp-oauth2)
+[![Code Climate](https://codeclimate.com/github/dahal/omniauth-adp-oauth2/badges/gpa.svg)](https://codeclimate.com/github/dahal/omniauth-adp-oauth2)
+[![Issue Count](https://codeclimate.com/github/dahal/omniauth-adp-oauth2/badges/issue_count.svg)](https://codeclimate.com/github/dahal/omniauth-adp-oauth2)
 
 # OmniAuth ADP OAuth2 Strategy
 
@@ -10,7 +11,7 @@ Strategy to authenticate with ADP via OpenID CConnect in OmniAuth.
 Add to your `Gemfile`:
 
 ```ruby
-gem 'omniauth-adp-oauth2', github: 'dahal/omniauth-adp-oauth2'
+gem 'omniauth-adp-oauth2'
 ```
 
 Then `bundle install`.
