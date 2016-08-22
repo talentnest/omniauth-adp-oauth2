@@ -6,7 +6,14 @@ require 'uri'
 module OmniAuth
   module Strategies
     class AdpOauth2 < OmniAuth::Strategies::OAuth2
-      DEFAULT_SCOPE = %w(openid profile api)
+      DEFAULT_SCOPE = %w(
+        api
+        openid
+        profile
+        hr.workerInformationManagement.workerManagement.workerViewing.worker.read
+        hr.workerInformationManagement.workerManagement.associateManagement.associate.read
+        hr.workerInformationManagement.workerManagement.employeeManagement.employee.read
+      )
 
       option :name, 'adp_oauth2'
       option :skip_jwt, false
@@ -33,7 +40,6 @@ module OmniAuth
       private
 
       def callback_url
-        binding.pry
         options[:redirect_uri] || (full_host + script_name + callback_path)
       end
     end
