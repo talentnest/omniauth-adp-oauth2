@@ -6,14 +6,7 @@ require 'uri'
 module OmniAuth
   module Strategies
     class AdpOauth2 < OmniAuth::Strategies::OAuth2
-      DEFAULT_SCOPE = %w(
-        api
-        openid
-        profile
-        hr.workerInformationManagement.workerManagement.workerViewing.worker.read
-        hr.workerInformationManagement.workerManagement.associateManagement.associate.read
-        hr.workerInformationManagement.workerManagement.employeeManagement.employee.read
-      )
+      DEFAULT_SCOPE = %w(api openid profile)
 
       option :name, 'adp_oauth2'
       option :skip_jwt, false
