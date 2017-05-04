@@ -14,7 +14,7 @@ module OmniAuth
       option :authorize_options, %i(response_type client_id redirect_uri scope state)
 
       option :client_options, {
-        :site          => ENV['ADP_BASE_URL'] || 'https://accounts.adp.com',
+        :site          => ENV['ADP_AUTH_HOST'] || 'https://accounts.adp.com',
         :authorize_url => '/auth/oauth/v2/authorize',
         :token_url     => '/auth/oauth/v2/token'
       }
