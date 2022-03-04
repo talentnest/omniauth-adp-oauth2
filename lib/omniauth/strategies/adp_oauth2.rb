@@ -19,6 +19,25 @@ module OmniAuth
         :token_url     => '/auth/oauth/v2/token'
       }
 
+      uid do
+        raw_info['sub']
+      end
+
+      info do
+        {
+          name: raw_info['name'],
+          email: raw_info['email'],
+          first_name: raw_info['given_name'],
+          last_name: raw_info['family_name'],
+          organizationOID: raw_info['organizationOID'],
+          associateOID: raw_info['associateOID']
+        }
+      end
+
+      def raw_info
+        @raw_info ||= access_token.get(options[:client_options][:user_info_url]).parsed
+      end
+
       def authorize_params
         super.tap do |params|
           options[:authorize_options].each do |k|
