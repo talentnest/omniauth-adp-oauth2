@@ -20,7 +20,7 @@ module OmniAuth
       }
 
       uid do
-        raw_info['sub']
+        raw_info['associateOID']
       end
 
       info do
